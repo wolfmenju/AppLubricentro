@@ -858,6 +858,7 @@
     <Content Include="Icono-InguiriSoft-correo.ico" />
     <Content Include="Imagenes\1405979407_96395.ico" />
     <Content Include="Imagenes\1405981010_43663.ico" />
+    <None Include="Imagenes\Aceite.png" />
     <Content Include="Imagenes\Derecha.ico" />
     <Content Include="Imagenes\doctor.ico" />
     <Content Include="Imagenes\Excel.png" />

@@ -170,9 +170,9 @@
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(11, 113);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(56, 26);
+            this.label1.Size = new System.Drawing.Size(69, 13);
             this.label1.TabIndex = 40;
-            this.label1.Text = "Principio\r\nActivo\r\n";
+            this.label1.Text = "Referencia";
             // 
             // ChkAlternativo
             // 
@@ -186,6 +186,7 @@
             this.ChkAlternativo.TabStop = false;
             this.ChkAlternativo.Text = "Alternativo";
             this.ChkAlternativo.UseVisualStyleBackColor = true;
+            this.ChkAlternativo.Visible = false;
             // 
             // LblCodigo
             // 

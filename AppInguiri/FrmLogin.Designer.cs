@@ -41,6 +41,7 @@
             this.PanSuperior = new System.Windows.Forms.Panel();
             this.LogoPictureBox = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.Panel1.SuspendLayout();
             this.PanSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.LogoPictureBox)).BeginInit();
@@ -185,6 +186,17 @@
             this.label2.Text = "Versión 07122021";
             this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 6.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(199, 110);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(59, 12);
+            this.label3.TabIndex = 101;
+            this.label3.Text = "T:Lubricentro";
+            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            // 
             // FrmLogin
             // 
             this.AcceptButton = this.btnIniciarSesion;
@@ -193,6 +205,7 @@
             this.BackColor = System.Drawing.Color.Lavender;
             this.ClientSize = new System.Drawing.Size(515, 127);
             this.ControlBox = false;
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnIniciarSesion);
@@ -228,5 +241,6 @@
         internal System.Windows.Forms.Panel PanSuperior;
         internal System.Windows.Forms.PictureBox LogoPictureBox;
         internal System.Windows.Forms.Label label2;
+        internal System.Windows.Forms.Label label3;
     }
 }

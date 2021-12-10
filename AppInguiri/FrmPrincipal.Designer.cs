@@ -223,7 +223,7 @@
             // 
             // barBtnCategoria
             // 
-            this.barBtnCategoria.Caption = "Laboratorio";
+            this.barBtnCategoria.Caption = "Categoria";
             this.barBtnCategoria.Glyph = ((System.Drawing.Image)(resources.GetObject("barBtnCategoria.Glyph")));
             this.barBtnCategoria.Id = 6;
             this.barBtnCategoria.LargeGlyph = global::AppInguiri.Properties.Resources.xLaboratorio;
@@ -240,7 +240,7 @@
             // 
             this.barBtnProducto.Caption = "Producto";
             this.barBtnProducto.Id = 9;
-            this.barBtnProducto.LargeGlyph = global::AppInguiri.Properties.Resources.pills_2;
+            this.barBtnProducto.LargeGlyph = global::AppInguiri.Properties.Resources.Aceite;
             this.barBtnProducto.Name = "barBtnProducto";
             this.barBtnProducto.Tag = "4";
             this.barBtnProducto.ItemClick += new DevExpress.XtraBars.ItemClickEventHandler(this.barBtnProducto_ItemClick);

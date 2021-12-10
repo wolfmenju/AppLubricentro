@@ -28,23 +28,23 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProducto));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProducto));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.PanOpciones = new System.Windows.Forms.Panel();
-            this.BtnEliminar = new System.Windows.Forms.Button();
-            this.BtnSalir = new System.Windows.Forms.Button();
-            this.BtnRefrescar = new System.Windows.Forms.Button();
-            this.BtnBuscar = new System.Windows.Forms.Button();
-            this.BtnAgregar = new System.Windows.Forms.Button();
-            this.BtnModificar = new System.Windows.Forms.Button();
             this.PanInferior = new System.Windows.Forms.Panel();
             this.ChkTodos = new System.Windows.Forms.CheckBox();
             this.LblTotal = new System.Windows.Forms.Label();
             this.PanTodo = new System.Windows.Forms.Panel();
             this.DgvProducto = new System.Windows.Forms.DataGridView();
+            this.BtnSalir = new System.Windows.Forms.Button();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.BtnRefrescar = new System.Windows.Forms.Button();
+            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.BtnAgregar = new System.Windows.Forms.Button();
+            this.BtnModificar = new System.Windows.Forms.Button();
             this.nIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sPrincipioActivo = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -73,111 +73,6 @@
             this.PanOpciones.Name = "PanOpciones";
             this.PanOpciones.Size = new System.Drawing.Size(109, 482);
             this.PanOpciones.TabIndex = 12;
-            // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnEliminar.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
-            this.BtnEliminar.Location = new System.Drawing.Point(3, 243);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(102, 52);
-            this.BtnEliminar.TabIndex = 4;
-            this.BtnEliminar.TabStop = false;
-            this.BtnEliminar.Text = "&Eliminar  [F5]";
-            this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BtnEliminar.UseVisualStyleBackColor = true;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
-            // 
-            // BtnSalir
-            // 
-            this.BtnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
-            this.BtnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnSalir.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
-            this.BtnSalir.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnSalir.ForeColor = System.Drawing.Color.Black;
-            this.BtnSalir.Image = global::AppInguiri.Properties.Resources.xSalir1;
-            this.BtnSalir.Location = new System.Drawing.Point(3, 417);
-            this.BtnSalir.Name = "BtnSalir";
-            this.BtnSalir.Size = new System.Drawing.Size(102, 52);
-            this.BtnSalir.TabIndex = 5;
-            this.BtnSalir.TabStop = false;
-            this.BtnSalir.Text = "&Salir      [Esc]";
-            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BtnSalir.UseVisualStyleBackColor = true;
-            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
-            // BtnRefrescar
-            // 
-            this.BtnRefrescar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnRefrescar.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnRefrescar.ForeColor = System.Drawing.Color.Black;
-            this.BtnRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRefrescar.Image")));
-            this.BtnRefrescar.Location = new System.Drawing.Point(3, 127);
-            this.BtnRefrescar.Name = "BtnRefrescar";
-            this.BtnRefrescar.Size = new System.Drawing.Size(102, 52);
-            this.BtnRefrescar.TabIndex = 2;
-            this.BtnRefrescar.TabStop = false;
-            this.BtnRefrescar.Text = "&Recargar [F3]";
-            this.BtnRefrescar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnRefrescar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BtnRefrescar.UseVisualStyleBackColor = true;
-            this.BtnRefrescar.Click += new System.EventHandler(this.BtnRefrescar_Click);
-            // 
-            // BtnBuscar
-            // 
-            this.BtnBuscar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnBuscar.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBuscar.ForeColor = System.Drawing.Color.Black;
-            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
-            this.BtnBuscar.Location = new System.Drawing.Point(3, 185);
-            this.BtnBuscar.Name = "BtnBuscar";
-            this.BtnBuscar.Size = new System.Drawing.Size(102, 52);
-            this.BtnBuscar.TabIndex = 3;
-            this.BtnBuscar.TabStop = false;
-            this.BtnBuscar.Text = "  &Buscar  [F4]";
-            this.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BtnBuscar.UseVisualStyleBackColor = true;
-            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
-            // 
-            // BtnAgregar
-            // 
-            this.BtnAgregar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnAgregar.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnAgregar.ForeColor = System.Drawing.Color.Black;
-            this.BtnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("BtnAgregar.Image")));
-            this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
-            this.BtnAgregar.Location = new System.Drawing.Point(3, 11);
-            this.BtnAgregar.Name = "BtnAgregar";
-            this.BtnAgregar.Size = new System.Drawing.Size(102, 52);
-            this.BtnAgregar.TabIndex = 0;
-            this.BtnAgregar.TabStop = false;
-            this.BtnAgregar.Text = "  &Nuevo  [F1]";
-            this.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnAgregar.UseVisualStyleBackColor = true;
-            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
-            // 
-            // BtnModificar
-            // 
-            this.BtnModificar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnModificar.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnModificar.ForeColor = System.Drawing.Color.Black;
-            this.BtnModificar.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificar.Image")));
-            this.BtnModificar.Location = new System.Drawing.Point(3, 69);
-            this.BtnModificar.Name = "BtnModificar";
-            this.BtnModificar.Size = new System.Drawing.Size(102, 52);
-            this.BtnModificar.TabIndex = 1;
-            this.BtnModificar.TabStop = false;
-            this.BtnModificar.Text = "&Actualizar [F2]";
-            this.BtnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BtnModificar.UseVisualStyleBackColor = true;
-            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
             // 
             // PanInferior
             // 
@@ -279,6 +174,111 @@
             this.DgvProducto.Size = new System.Drawing.Size(891, 460);
             this.DgvProducto.TabIndex = 11;
             // 
+            // BtnSalir
+            // 
+            this.BtnSalir.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.BtnSalir.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.BtnSalir.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnSalir.FlatAppearance.BorderColor = System.Drawing.Color.Cyan;
+            this.BtnSalir.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnSalir.ForeColor = System.Drawing.Color.Black;
+            this.BtnSalir.Image = global::AppInguiri.Properties.Resources.xSalir1;
+            this.BtnSalir.Location = new System.Drawing.Point(3, 417);
+            this.BtnSalir.Name = "BtnSalir";
+            this.BtnSalir.Size = new System.Drawing.Size(102, 52);
+            this.BtnSalir.TabIndex = 5;
+            this.BtnSalir.TabStop = false;
+            this.BtnSalir.Text = "&Salir      [Esc]";
+            this.BtnSalir.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnSalir.UseVisualStyleBackColor = true;
+            this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
+            // 
+            // BtnEliminar
+            // 
+            this.BtnEliminar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnEliminar.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.ForeColor = System.Drawing.Color.Black;
+            this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
+            this.BtnEliminar.Location = new System.Drawing.Point(3, 243);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(102, 52);
+            this.BtnEliminar.TabIndex = 4;
+            this.BtnEliminar.TabStop = false;
+            this.BtnEliminar.Text = "&Eliminar  [F5]";
+            this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
+            // 
+            // BtnRefrescar
+            // 
+            this.BtnRefrescar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnRefrescar.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnRefrescar.ForeColor = System.Drawing.Color.Black;
+            this.BtnRefrescar.Image = ((System.Drawing.Image)(resources.GetObject("BtnRefrescar.Image")));
+            this.BtnRefrescar.Location = new System.Drawing.Point(3, 127);
+            this.BtnRefrescar.Name = "BtnRefrescar";
+            this.BtnRefrescar.Size = new System.Drawing.Size(102, 52);
+            this.BtnRefrescar.TabIndex = 2;
+            this.BtnRefrescar.TabStop = false;
+            this.BtnRefrescar.Text = "&Recargar [F3]";
+            this.BtnRefrescar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnRefrescar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnRefrescar.UseVisualStyleBackColor = true;
+            this.BtnRefrescar.Click += new System.EventHandler(this.BtnRefrescar_Click);
+            // 
+            // BtnBuscar
+            // 
+            this.BtnBuscar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnBuscar.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnBuscar.ForeColor = System.Drawing.Color.Black;
+            this.BtnBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BtnBuscar.Image")));
+            this.BtnBuscar.Location = new System.Drawing.Point(3, 185);
+            this.BtnBuscar.Name = "BtnBuscar";
+            this.BtnBuscar.Size = new System.Drawing.Size(102, 52);
+            this.BtnBuscar.TabIndex = 3;
+            this.BtnBuscar.TabStop = false;
+            this.BtnBuscar.Text = "  &Buscar  [F4]";
+            this.BtnBuscar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnBuscar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnBuscar.UseVisualStyleBackColor = true;
+            this.BtnBuscar.Click += new System.EventHandler(this.BtnBuscar_Click);
+            // 
+            // BtnAgregar
+            // 
+            this.BtnAgregar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnAgregar.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnAgregar.ForeColor = System.Drawing.Color.Black;
+            this.BtnAgregar.Image = ((System.Drawing.Image)(resources.GetObject("BtnAgregar.Image")));
+            this.BtnAgregar.ImageAlign = System.Drawing.ContentAlignment.TopCenter;
+            this.BtnAgregar.Location = new System.Drawing.Point(3, 11);
+            this.BtnAgregar.Name = "BtnAgregar";
+            this.BtnAgregar.Size = new System.Drawing.Size(102, 52);
+            this.BtnAgregar.TabIndex = 0;
+            this.BtnAgregar.TabStop = false;
+            this.BtnAgregar.Text = "  &Nuevo  [F1]";
+            this.BtnAgregar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnAgregar.UseVisualStyleBackColor = true;
+            this.BtnAgregar.Click += new System.EventHandler(this.BtnAgregar_Click);
+            // 
+            // BtnModificar
+            // 
+            this.BtnModificar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnModificar.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnModificar.ForeColor = System.Drawing.Color.Black;
+            this.BtnModificar.Image = ((System.Drawing.Image)(resources.GetObject("BtnModificar.Image")));
+            this.BtnModificar.Location = new System.Drawing.Point(3, 69);
+            this.BtnModificar.Name = "BtnModificar";
+            this.BtnModificar.Size = new System.Drawing.Size(102, 52);
+            this.BtnModificar.TabIndex = 1;
+            this.BtnModificar.TabStop = false;
+            this.BtnModificar.Text = "&Actualizar [F2]";
+            this.BtnModificar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnModificar.UseVisualStyleBackColor = true;
+            this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
+            // 
             // nIdProducto
             // 
             this.nIdProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
@@ -287,6 +287,7 @@
             this.nIdProducto.Name = "nIdProducto";
             this.nIdProducto.ReadOnly = true;
             this.nIdProducto.Visible = false;
+            this.nIdProducto.Width = 72;
             // 
             // sDescripcion
             // 
@@ -303,10 +304,10 @@
             this.sPrincipioActivo.DataPropertyName = "sPrincipioActivo";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.sPrincipioActivo.DefaultCellStyle = dataGridViewCellStyle3;
-            this.sPrincipioActivo.HeaderText = "Principio Activo";
+            this.sPrincipioActivo.HeaderText = "Referencia";
             this.sPrincipioActivo.Name = "sPrincipioActivo";
             this.sPrincipioActivo.ReadOnly = true;
-            this.sPrincipioActivo.Width = 96;
+            this.sPrincipioActivo.Width = 84;
             // 
             // nIdLaboratorio
             // 
@@ -332,6 +333,7 @@
             this.bAlternativo.ReadOnly = true;
             this.bAlternativo.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.bAlternativo.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.Automatic;
+            this.bAlternativo.Visible = false;
             // 
             // nStockMinimo
             // 

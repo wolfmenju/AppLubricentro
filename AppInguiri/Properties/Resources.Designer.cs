@@ -73,6 +73,16 @@ namespace AppInguiri.Properties {
         /// <summary>
         ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
         /// </summary>
+        internal static System.Drawing.Bitmap Aceite {
+            get {
+                object obj = ResourceManager.GetObject("Aceite", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Busca un recurso adaptado de tipo System.Drawing.Bitmap.
+        /// </summary>
         internal static System.Drawing.Bitmap Derecha {
             get {
                 object obj = ResourceManager.GetObject("Derecha", resourceCulture);

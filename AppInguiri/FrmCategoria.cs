@@ -136,7 +136,7 @@ namespace AppInguiri
             }
             else
             {
-                DgvCategoria.DataSource = listCategoria;
+                DgvCategoria.DataSource = null;
             }
 
             LblTotal.Text = "Se Encontraron " + DgvCategoria.Rows.Count + " Registros";

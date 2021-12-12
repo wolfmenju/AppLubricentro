@@ -48,12 +48,13 @@ namespace Datos
                     if (objProducto.nTipo == 1)
                     {
                         objProd.nIdProducto = Convert.ToInt32(dr[0]);
-                        objProd.sDescripcion = dr[1].ToString();
-                        objProd.sPrincipioActivo = dr[2].ToString();
-                        objProd.nIdLaboratorio = Convert.ToInt32(dr[3].ToString());
-                        objProd.nIdPresentacion = Convert.ToInt32(dr[4].ToString());
-                        objProd.bAlternativo = Convert.ToBoolean(dr[5].ToString());
-                        objProd.nStockMinimo = Convert.ToInt32(dr[6].ToString());
+                        objProd.sCodigoInterno = dr[1].ToString();
+                        objProd.sDescripcion = dr[2].ToString();
+                        objProd.sPrincipioActivo = dr[3].ToString();
+                        objProd.nIdLaboratorio = Convert.ToInt32(dr[4].ToString());
+                        objProd.nIdPresentacion = Convert.ToInt32(dr[5].ToString());
+                        objProd.bAlternativo = Convert.ToBoolean(dr[6].ToString());
+                        objProd.nStockMinimo = Convert.ToInt32(dr[7].ToString());
                     }
                     else if (objProducto.nTipo == 7)
                     {
@@ -137,6 +138,7 @@ namespace Datos
                 cmd = new SqlCommand("IAE_ProductoFinal", cnx);
                 cmd.Parameters.AddWithValue("@Tipo", 1);
                 cmd.Parameters.AddWithValue("@IdProducto", objProducto.nIdProducto);
+                cmd.Parameters.AddWithValue("@CodigoInterno", objProducto.sCodigoInterno);
                 cmd.Parameters.AddWithValue("@Descripcion", objProducto.sDescripcion);
                 cmd.Parameters.AddWithValue("@Usuario", objProducto.sUsuario);
                 cmd.Parameters.AddWithValue("@Estado", objProducto.bEstado);

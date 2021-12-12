@@ -135,7 +135,7 @@ namespace AppInguiri
             }
             else
             {
-                DgvPresentacion.DataSource = listPresenta;
+                DgvPresentacion.DataSource = null;
             }
         }
         private void Eliminar()

@@ -18,6 +18,7 @@ namespace AppInguiri
         ProductoNegocio objProducNeg = new ProductoNegocio();
         CategoriaNegocio objCateNeg = new CategoriaNegocio();
         PresentacionNegocio objPreseNeg = new PresentacionNegocio();
+        public FrmProducto frmProducto = null;
 
         public int tipo = 0;
         private bool cerrarFormulario = true;
@@ -116,6 +117,7 @@ namespace AppInguiri
             Producto objProduc = new Producto()
             {
                 sDescripcion = txtDescripcion.Text.ToUpper().Trim(),
+                sCodigoInterno=lblCodigoInterno.Text,
                 bAlternativo = ChkAlternativo.Checked,
                 sPrincipioActivo = txtPrincipioActivo.Text.ToUpper().Trim(),
                 nIdLaboratorio = (int)cbxLaboratorio.SelectedValue,
@@ -165,7 +167,8 @@ namespace AppInguiri
         {
             if (tipo == 0)
             {
-                LblCodigo.Text = "AUTOGENERADO";
+                //LblCodigo.Text = "AUTOGENERADO";
+                lblCodigoInterno.Text = GeneradaCodigo();
 
             }
             else
@@ -179,6 +182,23 @@ namespace AppInguiri
             }
         }
 
+        private string GeneradaCodigo()
+        {
+            string cod = "";
+
+            if (frmProducto.listProducto.Count < 1)
+                return "P0001";
+            else
+            {
+                foreach (Producto item in frmProducto.listProducto)
+                {
+                    cod = item.sCodigoInterno.ToString();
+                }
+
+                return "P" + (int.Parse(cod.Substring(1,4)) + 1).ToString("0000");
+            }
+        }
+        
         private void CmdCancelar_Click(object sender, EventArgs e)
         {
             cerrarFormulario = true;

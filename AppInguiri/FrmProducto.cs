@@ -19,7 +19,7 @@ namespace AppInguiri
     {
         private static FrmProducto frmInstance = null;
         ProductoNegocio objProducNeg = new ProductoNegocio();
-        List<Producto> listProducto = new List<Producto>();
+        public List<Producto> listProducto = new List<Producto>();
         bool estado = true;
 
         //Singleton
@@ -47,8 +47,7 @@ namespace AppInguiri
         }
 
         #endregion
-
-
+        
         #region Metodo Privados
         private void CargarProducto()
         {
@@ -103,10 +102,11 @@ namespace AppInguiri
 
         private void Agregar()
         {
-            FrmProductoActualiza frmProducto = new FrmProductoActualiza();
-            frmProducto.Text = "Registro Producto";
+            FrmProductoActualiza frmProductoAct = new FrmProductoActualiza();
+            frmProductoAct.frmProducto = this;
+            frmProductoAct.Text = "Registro Producto";
 
-            if (frmProducto.ShowDialog() == DialogResult.OK)
+            if (frmProductoAct.ShowDialog() == DialogResult.OK)
             {
                 CargarProducto();
             }

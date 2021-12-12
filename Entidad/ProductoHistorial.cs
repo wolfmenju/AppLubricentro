@@ -33,6 +33,7 @@ namespace Entidad
         public int nTipo { get; set; }
         public int nIdProductoHistorial { get; set; }
         public int nIdProducto { get; set; }
+        public string sCodigoInterno { get; set; }
         public int nIdAlmacen { get; set; }
         public string sLote { get; set; }
         public string sIdLote { get; set; }

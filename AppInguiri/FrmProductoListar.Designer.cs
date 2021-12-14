@@ -74,6 +74,7 @@
             this.PanProducto = new System.Windows.Forms.Panel();
             this.DgvProducto = new System.Windows.Forms.DataGridView();
             this.nIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sCodigoInterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bAlternativo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.sLaboratorio = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -110,8 +111,9 @@
             this.CboTipoBusqueda.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.CboTipoBusqueda.FormattingEnabled = true;
             this.CboTipoBusqueda.Items.AddRange(new object[] {
-            "MEDICAMENTO",
-            "PRINCIPIO ACTIVO"});
+            "PRODUCTO",
+            "REFERENCIA",
+            "CODIGO INTERNO"});
             this.CboTipoBusqueda.Location = new System.Drawing.Point(7, 9);
             this.CboTipoBusqueda.Name = "CboTipoBusqueda";
             this.CboTipoBusqueda.Size = new System.Drawing.Size(138, 21);
@@ -351,7 +353,7 @@
             this.DgvDetalles.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F);
             dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -404,7 +406,7 @@
             this.sLote.HeaderText = "Lote";
             this.sLote.Name = "sLote";
             this.sLote.ReadOnly = true;
-            this.sLote.Width = 57;
+            this.sLote.Width = 53;
             // 
             // dFechaVencimiento
             // 
@@ -417,7 +419,7 @@
             this.dFechaVencimiento.HeaderText = "Vencimiento";
             this.dFechaVencimiento.Name = "dFechaVencimiento";
             this.dFechaVencimiento.ReadOnly = true;
-            this.dFechaVencimiento.Width = 102;
+            this.dFechaVencimiento.Width = 89;
             // 
             // fPrecioCompra
             // 
@@ -430,7 +432,7 @@
             this.fPrecioCompra.HeaderText = "Precio Compra";
             this.fPrecioCompra.Name = "fPrecioCompra";
             this.fPrecioCompra.ReadOnly = true;
-            this.fPrecioCompra.Width = 105;
+            this.fPrecioCompra.Width = 101;
             // 
             // fPrecioVenta
             // 
@@ -442,7 +444,7 @@
             this.fPrecioVenta.HeaderText = "Precio Venta";
             this.fPrecioVenta.Name = "fPrecioVenta";
             this.fPrecioVenta.ReadOnly = true;
-            this.fPrecioVenta.Width = 95;
+            this.fPrecioVenta.Width = 92;
             // 
             // nStock
             // 
@@ -453,7 +455,7 @@
             this.nStock.HeaderText = "Stock";
             this.nStock.Name = "nStock";
             this.nStock.ReadOnly = true;
-            this.nStock.Width = 64;
+            this.nStock.Width = 58;
             // 
             // bSeleccionar
             // 
@@ -462,7 +464,7 @@
             this.bSeleccionar.HeaderText = "Seleccionar";
             this.bSeleccionar.Name = "bSeleccionar";
             this.bSeleccionar.ReadOnly = true;
-            this.bSeleccionar.Width = 78;
+            this.bSeleccionar.Width = 67;
             // 
             // PanProducto
             // 
@@ -488,7 +490,7 @@
             this.DgvProducto.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
             dataGridViewCellStyle10.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle10.BackColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle10.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Tahoma", 8.25F);
             dataGridViewCellStyle10.ForeColor = System.Drawing.SystemColors.WindowText;
             dataGridViewCellStyle10.SelectionBackColor = System.Drawing.SystemColors.Highlight;
             dataGridViewCellStyle10.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
@@ -497,6 +499,7 @@
             this.DgvProducto.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.DgvProducto.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nIdProducto,
+            this.sCodigoInterno,
             this.sDescripcion,
             this.bAlternativo,
             this.sLaboratorio,
@@ -532,6 +535,17 @@
             this.nIdProducto.Name = "nIdProducto";
             this.nIdProducto.ReadOnly = true;
             this.nIdProducto.Visible = false;
+            this.nIdProducto.Width = 66;
+            // 
+            // sCodigoInterno
+            // 
+            this.sCodigoInterno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.sCodigoInterno.DataPropertyName = "sCodigoInterno";
+            this.sCodigoInterno.Frozen = true;
+            this.sCodigoInterno.HeaderText = "Codigo Interno";
+            this.sCodigoInterno.Name = "sCodigoInterno";
+            this.sCodigoInterno.ReadOnly = true;
+            this.sCodigoInterno.Width = 96;
             // 
             // sDescripcion
             // 
@@ -540,10 +554,10 @@
             dataGridViewCellStyle11.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.sDescripcion.DefaultCellStyle = dataGridViewCellStyle11;
             this.sDescripcion.Frozen = true;
-            this.sDescripcion.HeaderText = "Medicamento";
+            this.sDescripcion.HeaderText = "Producto";
             this.sDescripcion.Name = "sDescripcion";
             this.sDescripcion.ReadOnly = true;
-            this.sDescripcion.Width = 109;
+            this.sDescripcion.Width = 75;
             // 
             // bAlternativo
             // 
@@ -552,7 +566,8 @@
             this.bAlternativo.HeaderText = "Alternativo";
             this.bAlternativo.Name = "bAlternativo";
             this.bAlternativo.ReadOnly = true;
-            this.bAlternativo.Width = 77;
+            this.bAlternativo.Visible = false;
+            this.bAlternativo.Width = 66;
             // 
             // sLaboratorio
             // 
@@ -560,12 +575,12 @@
             this.sLaboratorio.DataPropertyName = "sLaboratorio";
             dataGridViewCellStyle12.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.sLaboratorio.DefaultCellStyle = dataGridViewCellStyle12;
-            this.sLaboratorio.HeaderText = "Laboratorio";
+            this.sLaboratorio.HeaderText = "Categoria";
             this.sLaboratorio.Name = "sLaboratorio";
             this.sLaboratorio.ReadOnly = true;
             this.sLaboratorio.Resizable = System.Windows.Forms.DataGridViewTriState.True;
             this.sLaboratorio.SortMode = System.Windows.Forms.DataGridViewColumnSortMode.NotSortable;
-            this.sLaboratorio.Width = 79;
+            this.sLaboratorio.Width = 60;
             // 
             // nTotal
             // 
@@ -578,7 +593,7 @@
             this.nTotal.HeaderText = "Total";
             this.nTotal.Name = "nTotal";
             this.nTotal.ReadOnly = true;
-            this.nTotal.Width = 61;
+            this.nTotal.Width = 56;
             // 
             // sPrincipioActivo
             // 
@@ -586,10 +601,10 @@
             this.sPrincipioActivo.DataPropertyName = "sPrincipioActivo";
             dataGridViewCellStyle14.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.sPrincipioActivo.DefaultCellStyle = dataGridViewCellStyle14;
-            this.sPrincipioActivo.HeaderText = "Principio Activo";
+            this.sPrincipioActivo.HeaderText = "Referencia";
             this.sPrincipioActivo.Name = "sPrincipioActivo";
             this.sPrincipioActivo.ReadOnly = true;
-            this.sPrincipioActivo.Width = 109;
+            this.sPrincipioActivo.Width = 84;
             // 
             // sPresentacion
             // 
@@ -600,7 +615,7 @@
             this.sPresentacion.HeaderText = "Presentación";
             this.sPresentacion.Name = "sPresentacion";
             this.sPresentacion.ReadOnly = true;
-            this.sPresentacion.Width = 106;
+            this.sPresentacion.Width = 94;
             // 
             // FrmProductoListar
             // 
@@ -656,13 +671,6 @@
         internal System.Windows.Forms.DataGridView DgvDetalles;
         internal System.Windows.Forms.Panel PanProducto;
         internal System.Windows.Forms.DataGridView DgvProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nIdProducto;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sDescripcion;
-        private System.Windows.Forms.DataGridViewCheckBoxColumn bAlternativo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sLaboratorio;
-        private System.Windows.Forms.DataGridViewTextBoxColumn nTotal;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sPrincipioActivo;
-        private System.Windows.Forms.DataGridViewTextBoxColumn sPresentacion;
         private System.Windows.Forms.DataGridViewTextBoxColumn nIdProductoHistorial;
         private System.Windows.Forms.DataGridViewTextBoxColumn sLote;
         private System.Windows.Forms.DataGridViewTextBoxColumn dFechaVencimiento;
@@ -671,5 +679,13 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn nStock;
         private System.Windows.Forms.DataGridViewCheckBoxColumn bSeleccionar;
         internal System.Windows.Forms.TextBox NdCantidad;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nIdProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sCodigoInterno;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sDescripcion;
+        private System.Windows.Forms.DataGridViewCheckBoxColumn bAlternativo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sLaboratorio;
+        private System.Windows.Forms.DataGridViewTextBoxColumn nTotal;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sPrincipioActivo;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sPresentacion;
     }
 }

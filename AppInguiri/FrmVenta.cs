@@ -57,10 +57,10 @@ namespace AppInguiri
             List<Documento> lis = objDocumentNeg.ListarDocumento(objDoc);
             cboDocumento.ValueMember = "sIdDocumento";
             cboDocumento.DisplayMember = "sDescripcion";
-            lis.RemoveAt(2);
-            lis.RemoveAt(2);
-            lis.RemoveAt(2);
-            lis.RemoveAt(2);
+            //lis.RemoveAt(2);
+            //lis.RemoveAt(2);
+            //lis.RemoveAt(2);
+            //lis.RemoveAt(2);
 
             cboDocumento.DataSource = lis;
             

@@ -32,7 +32,7 @@ namespace AppInguiri
 
         private void Guardar()
         {
-            if (dtFechaInicia.Value < DateTime.Now)
+            if (dtFechaInicia.Value.Date < DateTime.Now.Date)
             {
                 MessageBox.Show("La fecha del inventario no puede ser menor a la fecha actual.", "InguiriSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 cerrarFormulario = false;

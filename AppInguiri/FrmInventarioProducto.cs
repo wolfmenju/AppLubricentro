@@ -62,6 +62,7 @@ namespace AppInguiri
         private void CargarDatosProductos()
         {
             lblCodigo.Text = producto.nIdProducto.ToString();
+            lblCodigoInterno.Text = producto.sCodigoInterno;
             lblProducto.Text = producto.sDescripcion.ToString();
             txtPrecioVenta.Text = producto.fPrecioVenta.ToString();
             txtPrecioCompra.Text = producto.fPrecioCompra.ToString();
@@ -151,7 +152,7 @@ namespace AppInguiri
         {
             bool resp = true;
 
-            if (dtFechaVencimiento.Value<=DateTime.Now)
+            if (dtFechaVencimiento.Value.Date<DateTime.Now.Date)
             {
                 MessageBox.Show("La Fecha de Vencimiento del Producto no puede ser menor que la fecha actual.", "InguiriSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 resp = false;

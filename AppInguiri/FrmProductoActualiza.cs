@@ -174,6 +174,7 @@ namespace AppInguiri
             else
             {
                 //Actualizar
+                lblCodigoInterno.Text = producto.sCodigoInterno.ToString();
                 LblCodigo.Text = producto.nIdProducto.ToString();
                 txtDescripcion.Text = producto.sDescripcion.ToUpper();
                 txtPrincipioActivo.Text = producto.sPrincipioActivo.ToUpper();
@@ -184,18 +185,20 @@ namespace AppInguiri
 
         private string GeneradaCodigo()
         {
-            string cod = "";
-
-            if (frmProducto.listProducto.Count < 1)
+            List<Producto> listProducto = new List<Producto>();
+            List<Producto> listProducto2 = new List<Producto>();
+            Producto objProducto = new Producto() { bEstado = true, nTipo=1 };
+            listProducto = objProducNeg.ListarProducto(objProducto);
+            objProducto.bEstado = false;
+            listProducto2 = objProducNeg.ListarProducto(objProducto);
+            int total = 0;
+            total = listProducto.Count + listProducto2.Count;
+            
+            if (total < 1)
                 return "P0001";
             else
             {
-                foreach (Producto item in frmProducto.listProducto)
-                {
-                    cod = item.sCodigoInterno.ToString();
-                }
-
-                return "P" + (int.Parse(cod.Substring(1,4)) + 1).ToString("0000");
+                return "P" + (total + 1).ToString("0000");
             }
         }
         

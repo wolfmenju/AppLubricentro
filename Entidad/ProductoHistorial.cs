@@ -27,6 +27,7 @@ namespace Entidad
             this.bSeleccionar = false;
             this.sUsuario = "";
             this.bEstado = true;
+            this.sCodigoInterno = "";
 
         }
         

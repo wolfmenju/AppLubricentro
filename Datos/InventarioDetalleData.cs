@@ -159,6 +159,8 @@ namespace Datos
                     cmdTarjeta.Parameters.AddWithValue("@Saldo", objInvenDetalle.fSaldo);
                     cmdTarjeta.Parameters.AddWithValue("@Usuario", objInvenDetalle.sUsuario);
                     cmdTarjeta.Parameters.AddWithValue("@Estado", objInvenDetalle.bEstado);
+                    cmdTarjeta.CommandType = CommandType.StoredProcedure;
+                    cmdTarjeta.Transaction = xTrans;
 
                     respuesta = cmdTarjeta.ExecuteNonQuery();
 

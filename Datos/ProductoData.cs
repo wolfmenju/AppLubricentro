@@ -69,39 +69,41 @@ namespace Datos
                     else if (objProducto.nTipo == 5 || objProducto.nTipo == 9 || objProducto.nTipo == 8 || objProducto.nTipo == 10)
                     {
                         objProd.nIdProducto = Convert.ToInt32(dr[0]);
-                        objProd.sDescripcion = dr[1].ToString();
-                        objProd.bAlternativo = Convert.ToBoolean(dr[2].ToString());
-                        objProd.sLaboratorio = dr[3].ToString();
+                        objProd.sCodigoInterno = dr[1].ToString();
+                        objProd.sDescripcion = dr[2].ToString();
+                        objProd.bAlternativo = Convert.ToBoolean(dr[3].ToString());
+                        objProd.sLaboratorio = dr[4].ToString();
 
                         if (objProducto.nTipo == 8)
                         {
-                            objProd.sPresentacion = dr[4].ToString();
-                            objProd.nTotal = Convert.ToInt32(dr[5].ToString());
+                            objProd.sPresentacion = dr[5].ToString();
+                            objProd.nTotal = Convert.ToInt32(dr[6].ToString());
                         }
                         else
                         {
-                            objProd.sPrincipioActivo = dr[4].ToString();
-                            objProd.sPresentacion = dr[5].ToString();
-                            objProd.nTotal = Convert.ToInt32(dr[6].ToString());
+                            objProd.sPrincipioActivo = dr[5].ToString();
+                            objProd.sPresentacion = dr[6].ToString();
+                            objProd.nTotal = Convert.ToInt32(dr[7].ToString());
                         }
                     }
                     else if (objProducto.nTipo == 4)
                     {
                         objProd.nIdProducto = Convert.ToInt32(dr[0]);
-                        objProd.sDescripcion = dr[1].ToString();
-                        objProd.bAlternativo =Convert.ToBoolean(dr[2]);
-                        if (dr[3] != DBNull.Value) objProd.dFechaVencimiento = DateTime.Parse(dr[3].ToString());
+                        objProd.sCodigoInterno = dr[1].ToString();
+                        objProd.sDescripcion = dr[2].ToString();
+                        objProd.bAlternativo =Convert.ToBoolean(dr[3]);
+                        if (dr[4] != DBNull.Value) objProd.dFechaVencimiento = DateTime.Parse(dr[4].ToString());
                         else objProd.dFechaVencimiento = null;
-                        if (dr[4] != DBNull.Value) objProd.nStock = int.Parse(dr[4].ToString());
+                        if (dr[5] != DBNull.Value) objProd.nStock = int.Parse(dr[5].ToString());
                         else objProd.nTotal = null;
-                        if (dr[5] != DBNull.Value) objProd.sLote = dr[5].ToString();
+                        if (dr[6] != DBNull.Value) objProd.sLote = dr[6].ToString();
                         else objProd.sLote = null;
-                        if (dr[6] != DBNull.Value) objProd.fPrecioCompra = Decimal.Parse(dr[6].ToString());
+                        if (dr[7] != DBNull.Value) objProd.fPrecioCompra = Decimal.Parse(dr[7].ToString());
                         else objProd.fPrecioCompra = null;
-                        if (dr[7] != DBNull.Value) objProd.fPrecioVenta = Decimal.Parse(dr[7].ToString());
+                        if (dr[8] != DBNull.Value) objProd.fPrecioVenta = Decimal.Parse(dr[8].ToString());
                         else objProd.fPrecioVenta = null;
-                        objProd.sLaboratorio = dr[8].ToString();
-                        objProd.sPresentacion = dr[9].ToString();
+                        objProd.sLaboratorio = dr[9].ToString();
+                        objProd.sPresentacion = dr[10].ToString();
                     }
 
                     listProducto.Add(objProd);
@@ -210,6 +212,7 @@ namespace Datos
                 cmd.Parameters.AddWithValue("@Tipo", 2);
                 cmd.Parameters.AddWithValue("@IdProducto", objProducto.nIdProducto);
                 cmd.Parameters.AddWithValue("@Descripcion", objProducto.sDescripcion);
+                cmd.Parameters.AddWithValue("@CodigoInterno", objProducto.sCodigoInterno);
                 cmd.Parameters.AddWithValue("@Usuario", objProducto.sUsuario);
                 cmd.Parameters.AddWithValue("@Estado", objProducto.bEstado);
                 cmd.CommandType = CommandType.StoredProcedure;
@@ -277,6 +280,7 @@ namespace Datos
                 cmd.Parameters.AddWithValue("@Tipo", tipo);
                 cmd.Parameters.AddWithValue("@IdProducto", objProducto.nIdProducto);
                 cmd.Parameters.AddWithValue("@Descripcion", objProducto.sDescripcion);
+                cmd.Parameters.AddWithValue("@CodigoInterno", objProducto.sCodigoInterno);
                 cmd.Parameters.AddWithValue("@Usuario", objProducto.sUsuario);
                 cmd.Parameters.AddWithValue("@Estado", objProducto.bEstado);
                 cmd.CommandType = CommandType.StoredProcedure;

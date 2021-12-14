@@ -46,7 +46,16 @@
             this.PanInferior = new System.Windows.Forms.Panel();
             this.LblTotal = new System.Windows.Forms.Label();
             this.dgvInventarioDetalle = new System.Windows.Forms.DataGridView();
+            this.PanSuperior = new System.Windows.Forms.Panel();
+            this.lblAlmacen = new System.Windows.Forms.Label();
+            this.Label4 = new System.Windows.Forms.Label();
+            this.lblInicio = new System.Windows.Forms.Label();
+            this.Label2 = new System.Windows.Forms.Label();
+            this.lblCodigo = new System.Windows.Forms.Label();
+            this.Label6 = new System.Windows.Forms.Label();
+            this.LblCodigoAlmacen = new System.Windows.Forms.Label();
             this.nIdProducto = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sCodigoInterno = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sDescripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Alternativo = new System.Windows.Forms.DataGridViewCheckBoxColumn();
             this.dFechaVencimiento = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -56,14 +65,6 @@
             this.fPrecioVenta = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sLaboratorio = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sPresentacion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.PanSuperior = new System.Windows.Forms.Panel();
-            this.lblAlmacen = new System.Windows.Forms.Label();
-            this.Label4 = new System.Windows.Forms.Label();
-            this.lblInicio = new System.Windows.Forms.Label();
-            this.Label2 = new System.Windows.Forms.Label();
-            this.lblCodigo = new System.Windows.Forms.Label();
-            this.Label6 = new System.Windows.Forms.Label();
-            this.LblCodigoAlmacen = new System.Windows.Forms.Label();
             this.PanOpciones.SuspendLayout();
             this.PanInferior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvInventarioDetalle)).BeginInit();
@@ -202,6 +203,7 @@
             this.dgvInventarioDetalle.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvInventarioDetalle.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.nIdProducto,
+            this.sCodigoInterno,
             this.sDescripcion,
             this.Alternativo,
             this.dFechaVencimiento,
@@ -228,116 +230,6 @@
             this.dgvInventarioDetalle.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvInventarioDetalle.Size = new System.Drawing.Size(889, 421);
             this.dgvInventarioDetalle.TabIndex = 13;
-            // 
-            // nIdProducto
-            // 
-            this.nIdProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nIdProducto.DataPropertyName = "nIdProducto";
-            this.nIdProducto.HeaderText = "IdProducto";
-            this.nIdProducto.Name = "nIdProducto";
-            this.nIdProducto.ReadOnly = true;
-            this.nIdProducto.Visible = false;
-            // 
-            // sDescripcion
-            // 
-            this.sDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.sDescripcion.DataPropertyName = "sDescripcion";
-            this.sDescripcion.HeaderText = "Descripción";
-            this.sDescripcion.Name = "sDescripcion";
-            this.sDescripcion.ReadOnly = true;
-            this.sDescripcion.Width = 108;
-            // 
-            // Alternativo
-            // 
-            this.Alternativo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.Alternativo.DataPropertyName = "bAlternativo";
-            this.Alternativo.HeaderText = "bAlternativo";
-            this.Alternativo.Name = "Alternativo";
-            this.Alternativo.ReadOnly = true;
-            this.Alternativo.Width = 88;
-            // 
-            // dFechaVencimiento
-            // 
-            this.dFechaVencimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.dFechaVencimiento.DataPropertyName = "dFechaVencimiento";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle3.Format = "d";
-            dataGridViewCellStyle3.NullValue = null;
-            this.dFechaVencimiento.DefaultCellStyle = dataGridViewCellStyle3;
-            this.dFechaVencimiento.HeaderText = "Fecha Vencimiento";
-            this.dFechaVencimiento.Name = "dFechaVencimiento";
-            this.dFechaVencimiento.ReadOnly = true;
-            this.dFechaVencimiento.Width = 141;
-            // 
-            // nStock
-            // 
-            this.nStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nStock.DataPropertyName = "nStock";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle4.Format = "N0";
-            dataGridViewCellStyle4.NullValue = "0";
-            this.nStock.DefaultCellStyle = dataGridViewCellStyle4;
-            this.nStock.HeaderText = "Stock";
-            this.nStock.Name = "nStock";
-            this.nStock.ReadOnly = true;
-            this.nStock.Width = 67;
-            // 
-            // sLote
-            // 
-            this.sLote.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.sLote.DataPropertyName = "sLote";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.sLote.DefaultCellStyle = dataGridViewCellStyle5;
-            this.sLote.HeaderText = "Lote";
-            this.sLote.Name = "sLote";
-            this.sLote.ReadOnly = true;
-            this.sLote.Width = 60;
-            // 
-            // fPrecioCompra
-            // 
-            this.fPrecioCompra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fPrecioCompra.DataPropertyName = "fPrecioCompra";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle6.Format = "C2";
-            dataGridViewCellStyle6.NullValue = "S/. 0.00";
-            this.fPrecioCompra.DefaultCellStyle = dataGridViewCellStyle6;
-            this.fPrecioCompra.HeaderText = "Precio Compra";
-            this.fPrecioCompra.Name = "fPrecioCompra";
-            this.fPrecioCompra.ReadOnly = true;
-            this.fPrecioCompra.Width = 116;
-            // 
-            // fPrecioVenta
-            // 
-            this.fPrecioVenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.fPrecioVenta.DataPropertyName = "fPrecioVenta";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
-            dataGridViewCellStyle7.Format = "C2";
-            dataGridViewCellStyle7.NullValue = "S/. 0.00";
-            this.fPrecioVenta.DefaultCellStyle = dataGridViewCellStyle7;
-            this.fPrecioVenta.HeaderText = "Precio Venta";
-            this.fPrecioVenta.Name = "fPrecioVenta";
-            this.fPrecioVenta.ReadOnly = true;
-            this.fPrecioVenta.Width = 104;
-            // 
-            // sLaboratorio
-            // 
-            this.sLaboratorio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.sLaboratorio.DataPropertyName = "sLaboratorio";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.sLaboratorio.DefaultCellStyle = dataGridViewCellStyle8;
-            this.sLaboratorio.HeaderText = "Laboratorio";
-            this.sLaboratorio.Name = "sLaboratorio";
-            this.sLaboratorio.ReadOnly = true;
-            this.sLaboratorio.Width = 106;
-            // 
-            // sPresentacion
-            // 
-            this.sPresentacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.sPresentacion.DataPropertyName = "sPresentacion";
-            this.sPresentacion.HeaderText = "Presentación";
-            this.sPresentacion.Name = "sPresentacion";
-            this.sPresentacion.ReadOnly = true;
-            this.sPresentacion.Width = 116;
             // 
             // PanSuperior
             // 
@@ -434,6 +326,127 @@
             this.LblCodigoAlmacen.TabIndex = 17;
             this.LblCodigoAlmacen.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
+            // nIdProducto
+            // 
+            this.nIdProducto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nIdProducto.DataPropertyName = "nIdProducto";
+            this.nIdProducto.HeaderText = "IdProducto";
+            this.nIdProducto.Name = "nIdProducto";
+            this.nIdProducto.ReadOnly = true;
+            this.nIdProducto.Visible = false;
+            this.nIdProducto.Width = 82;
+            // 
+            // sCodigoInterno
+            // 
+            this.sCodigoInterno.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.sCodigoInterno.DataPropertyName = "sCodigoInterno";
+            this.sCodigoInterno.HeaderText = "Codigo Interno";
+            this.sCodigoInterno.Name = "sCodigoInterno";
+            this.sCodigoInterno.ReadOnly = true;
+            this.sCodigoInterno.Width = 115;
+            // 
+            // sDescripcion
+            // 
+            this.sDescripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.sDescripcion.DataPropertyName = "sDescripcion";
+            this.sDescripcion.HeaderText = "Descripción";
+            this.sDescripcion.Name = "sDescripcion";
+            this.sDescripcion.ReadOnly = true;
+            this.sDescripcion.Width = 108;
+            // 
+            // Alternativo
+            // 
+            this.Alternativo.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Alternativo.DataPropertyName = "bAlternativo";
+            this.Alternativo.HeaderText = "bAlternativo";
+            this.Alternativo.Name = "Alternativo";
+            this.Alternativo.ReadOnly = true;
+            this.Alternativo.Visible = false;
+            this.Alternativo.Width = 88;
+            // 
+            // dFechaVencimiento
+            // 
+            this.dFechaVencimiento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.dFechaVencimiento.DataPropertyName = "dFechaVencimiento";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle3.Format = "d";
+            dataGridViewCellStyle3.NullValue = null;
+            this.dFechaVencimiento.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dFechaVencimiento.HeaderText = "Fecha Vencimiento";
+            this.dFechaVencimiento.Name = "dFechaVencimiento";
+            this.dFechaVencimiento.ReadOnly = true;
+            this.dFechaVencimiento.Width = 141;
+            // 
+            // nStock
+            // 
+            this.nStock.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nStock.DataPropertyName = "nStock";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle4.Format = "N0";
+            dataGridViewCellStyle4.NullValue = "0";
+            this.nStock.DefaultCellStyle = dataGridViewCellStyle4;
+            this.nStock.HeaderText = "Stock";
+            this.nStock.Name = "nStock";
+            this.nStock.ReadOnly = true;
+            this.nStock.Width = 67;
+            // 
+            // sLote
+            // 
+            this.sLote.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.sLote.DataPropertyName = "sLote";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.sLote.DefaultCellStyle = dataGridViewCellStyle5;
+            this.sLote.HeaderText = "Lote";
+            this.sLote.Name = "sLote";
+            this.sLote.ReadOnly = true;
+            this.sLote.Width = 60;
+            // 
+            // fPrecioCompra
+            // 
+            this.fPrecioCompra.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fPrecioCompra.DataPropertyName = "fPrecioCompra";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle6.Format = "C2";
+            dataGridViewCellStyle6.NullValue = "S/. 0.00";
+            this.fPrecioCompra.DefaultCellStyle = dataGridViewCellStyle6;
+            this.fPrecioCompra.HeaderText = "Precio Compra";
+            this.fPrecioCompra.Name = "fPrecioCompra";
+            this.fPrecioCompra.ReadOnly = true;
+            this.fPrecioCompra.Width = 116;
+            // 
+            // fPrecioVenta
+            // 
+            this.fPrecioVenta.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.fPrecioVenta.DataPropertyName = "fPrecioVenta";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleRight;
+            dataGridViewCellStyle7.Format = "C2";
+            dataGridViewCellStyle7.NullValue = "S/. 0.00";
+            this.fPrecioVenta.DefaultCellStyle = dataGridViewCellStyle7;
+            this.fPrecioVenta.HeaderText = "Precio Venta";
+            this.fPrecioVenta.Name = "fPrecioVenta";
+            this.fPrecioVenta.ReadOnly = true;
+            this.fPrecioVenta.Width = 104;
+            // 
+            // sLaboratorio
+            // 
+            this.sLaboratorio.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.sLaboratorio.DataPropertyName = "sLaboratorio";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.sLaboratorio.DefaultCellStyle = dataGridViewCellStyle8;
+            this.sLaboratorio.HeaderText = "Categoria";
+            this.sLaboratorio.Name = "sLaboratorio";
+            this.sLaboratorio.ReadOnly = true;
+            this.sLaboratorio.Width = 94;
+            // 
+            // sPresentacion
+            // 
+            this.sPresentacion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.sPresentacion.DataPropertyName = "sPresentacion";
+            this.sPresentacion.HeaderText = "Presentación";
+            this.sPresentacion.Name = "sPresentacion";
+            this.sPresentacion.ReadOnly = true;
+            this.sPresentacion.Width = 116;
+            // 
             // FrmInventarioDetalle
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -482,6 +495,7 @@
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.Label LblCodigoAlmacen;
         private System.Windows.Forms.DataGridViewTextBoxColumn nIdProducto;
+        private System.Windows.Forms.DataGridViewTextBoxColumn sCodigoInterno;
         private System.Windows.Forms.DataGridViewTextBoxColumn sDescripcion;
         private System.Windows.Forms.DataGridViewCheckBoxColumn Alternativo;
         private System.Windows.Forms.DataGridViewTextBoxColumn dFechaVencimiento;

@@ -47,6 +47,8 @@
             this.lblCodigo = new System.Windows.Forms.Label();
             this.Label6 = new System.Windows.Forms.Label();
             this.Label1 = new System.Windows.Forms.Label();
+            this.lblCodigoInterno = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
             this.PanSuperior.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.ndStock)).BeginInit();
             this.SuspendLayout();
@@ -84,6 +86,8 @@
             // PanSuperior
             // 
             this.PanSuperior.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanSuperior.Controls.Add(this.lblCodigoInterno);
+            this.PanSuperior.Controls.Add(this.label7);
             this.PanSuperior.Controls.Add(this.chkFechaVencimiento);
             this.PanSuperior.Controls.Add(this.txtLote);
             this.PanSuperior.Controls.Add(this.Label3);
@@ -171,6 +175,7 @@
             // 
             // dtFechaVencimiento
             // 
+            this.dtFechaVencimiento.Enabled = false;
             this.dtFechaVencimiento.Format = System.Windows.Forms.DateTimePickerFormat.Short;
             this.dtFechaVencimiento.Location = new System.Drawing.Point(103, 63);
             this.dtFechaVencimiento.Name = "dtFechaVencimiento";
@@ -257,6 +262,7 @@
             this.lblCodigo.Size = new System.Drawing.Size(123, 20);
             this.lblCodigo.TabIndex = 14;
             this.lblCodigo.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.lblCodigo.Visible = false;
             // 
             // Label6
             // 
@@ -267,6 +273,7 @@
             this.Label6.Size = new System.Drawing.Size(46, 13);
             this.Label6.TabIndex = 12;
             this.Label6.Text = "Código";
+            this.Label6.Visible = false;
             // 
             // Label1
             // 
@@ -277,6 +284,27 @@
             this.Label1.Size = new System.Drawing.Size(89, 13);
             this.Label1.TabIndex = 19;
             this.Label1.Text = "Precio Compra";
+            // 
+            // lblCodigoInterno
+            // 
+            this.lblCodigoInterno.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.lblCodigoInterno.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCodigoInterno.ForeColor = System.Drawing.SystemColors.Highlight;
+            this.lblCodigoInterno.Location = new System.Drawing.Point(103, 11);
+            this.lblCodigoInterno.Name = "lblCodigoInterno";
+            this.lblCodigoInterno.Size = new System.Drawing.Size(124, 20);
+            this.lblCodigoInterno.TabIndex = 50;
+            this.lblCodigoInterno.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(12, 8);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(50, 26);
+            this.label7.TabIndex = 49;
+            this.label7.Text = "Código \r\nInterno";
             // 
             // FrmInventarioProducto
             // 
@@ -325,5 +353,7 @@
         internal System.Windows.Forms.Label lblCodigo;
         internal System.Windows.Forms.Label Label6;
         internal System.Windows.Forms.Label Label1;
+        internal System.Windows.Forms.Label lblCodigoInterno;
+        internal System.Windows.Forms.Label label7;
     }
 }

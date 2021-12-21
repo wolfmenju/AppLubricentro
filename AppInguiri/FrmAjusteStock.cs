@@ -58,8 +58,7 @@ namespace AppInguiri
             cboDocumento.DisplayMember = "sDescripcion";
             lis.RemoveAt(0);
             lis.RemoveAt(0);
-            lis.RemoveAt(0);
-            lis.RemoveAt(3);
+            lis.RemoveAt(2);
 
             cboDocumento.DataSource = lis;
             cboDocumento.Enabled = true;

@@ -72,8 +72,8 @@ namespace AppInguiri
             List<Documento> lis = objDocumentNeg.ListarDocumento(objDoc);
             cboDocumento.ValueMember = "sIdDocumento";
             cboDocumento.DisplayMember = "sDescripcion";
-            //lis.RemoveAt(3);
-            //lis.RemoveAt(3);
+            lis.RemoveAt(2);
+            lis.RemoveAt(2);
             //lis.RemoveAt(3);
             cboDocumento.DataSource = lis;
             //Tipo de Pgo

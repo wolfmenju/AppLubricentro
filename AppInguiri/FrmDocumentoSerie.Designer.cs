@@ -32,14 +32,9 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmDocumentoSerie));
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.DgvDocumentoSerie = new System.Windows.Forms.DataGridView();
-            this.nIdDocumentoSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sIdDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nUltimo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.PanOpciones = new System.Windows.Forms.Panel();
             this.BtnEliminar = new System.Windows.Forms.Button();
             this.BtnSalir = new System.Windows.Forms.Button();
@@ -51,6 +46,11 @@
             this.ChkTodos = new System.Windows.Forms.CheckBox();
             this.LblTotal = new System.Windows.Forms.Label();
             this.PanTodo = new System.Windows.Forms.Panel();
+            this.nIdDocumentoSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sIdDocumento = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.Descripcion = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sSerie = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nUltimo = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.DgvDocumentoSerie)).BeginInit();
             this.PanOpciones.SuspendLayout();
             this.PanInferior.SuspendLayout();
@@ -109,47 +109,6 @@
             this.DgvDocumentoSerie.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.DgvDocumentoSerie.Size = new System.Drawing.Size(887, 458);
             this.DgvDocumentoSerie.TabIndex = 10;
-            // 
-            // nIdDocumentoSerie
-            // 
-            this.nIdDocumentoSerie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nIdDocumentoSerie.DataPropertyName = "nIdDocumentoSerie";
-            this.nIdDocumentoSerie.HeaderText = "nIdDocumentoSerie";
-            this.nIdDocumentoSerie.Name = "nIdDocumentoSerie";
-            this.nIdDocumentoSerie.ReadOnly = true;
-            this.nIdDocumentoSerie.Visible = false;
-            // 
-            // sIdDocumento
-            // 
-            this.sIdDocumento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.sIdDocumento.DataPropertyName = "sIdDocumento";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.sIdDocumento.DefaultCellStyle = dataGridViewCellStyle3;
-            this.sIdDocumento.HeaderText = "Documento";
-            this.sIdDocumento.Name = "sIdDocumento";
-            this.sIdDocumento.ReadOnly = true;
-            this.sIdDocumento.Width = 105;
-            // 
-            // Descripcion
-            // 
-            this.Descripcion.DataPropertyName = "sDescripcion";
-            this.Descripcion.HeaderText = "Descripcion";
-            this.Descripcion.Name = "Descripcion";
-            this.Descripcion.ReadOnly = true;
-            // 
-            // sSerie
-            // 
-            this.sSerie.DataPropertyName = "sSerie";
-            this.sSerie.HeaderText = "Serie";
-            this.sSerie.Name = "sSerie";
-            this.sSerie.ReadOnly = true;
-            // 
-            // nUltimo
-            // 
-            this.nUltimo.DataPropertyName = "nUltimo";
-            this.nUltimo.HeaderText = "Ultimo";
-            this.nUltimo.Name = "nUltimo";
-            this.nUltimo.ReadOnly = true;
             // 
             // PanOpciones
             // 
@@ -324,6 +283,50 @@
             this.PanTodo.Name = "PanTodo";
             this.PanTodo.Size = new System.Drawing.Size(889, 460);
             this.PanTodo.TabIndex = 17;
+            // 
+            // nIdDocumentoSerie
+            // 
+            this.nIdDocumentoSerie.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nIdDocumentoSerie.DataPropertyName = "nIdDocumentoSerie";
+            this.nIdDocumentoSerie.HeaderText = "nIdDocumentoSerie";
+            this.nIdDocumentoSerie.Name = "nIdDocumentoSerie";
+            this.nIdDocumentoSerie.ReadOnly = true;
+            this.nIdDocumentoSerie.Visible = false;
+            this.nIdDocumentoSerie.Width = 140;
+            // 
+            // sIdDocumento
+            // 
+            this.sIdDocumento.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.sIdDocumento.DataPropertyName = "sIdDocumento";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.sIdDocumento.DefaultCellStyle = dataGridViewCellStyle3;
+            this.sIdDocumento.HeaderText = "Documento";
+            this.sIdDocumento.Name = "sIdDocumento";
+            this.sIdDocumento.ReadOnly = true;
+            this.sIdDocumento.Width = 105;
+            // 
+            // Descripcion
+            // 
+            this.Descripcion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.Descripcion.DataPropertyName = "sDescripcion";
+            this.Descripcion.HeaderText = "Descripcion";
+            this.Descripcion.Name = "Descripcion";
+            this.Descripcion.ReadOnly = true;
+            this.Descripcion.Width = 108;
+            // 
+            // sSerie
+            // 
+            this.sSerie.DataPropertyName = "sSerie";
+            this.sSerie.HeaderText = "Serie";
+            this.sSerie.Name = "sSerie";
+            this.sSerie.ReadOnly = true;
+            // 
+            // nUltimo
+            // 
+            this.nUltimo.DataPropertyName = "nUltimo";
+            this.nUltimo.HeaderText = "Ultimo";
+            this.nUltimo.Name = "nUltimo";
+            this.nUltimo.ReadOnly = true;
             // 
             // FrmDocumentoSerie
             // 

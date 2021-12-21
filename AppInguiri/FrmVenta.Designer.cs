@@ -803,6 +803,7 @@
             this.sLote.HeaderText = "Lote";
             this.sLote.Name = "sLote";
             this.sLote.ReadOnly = true;
+            this.sLote.Visible = false;
             this.sLote.Width = 53;
             // 
             // Vencimiento
@@ -816,7 +817,8 @@
             this.Vencimiento.HeaderText = "Fecha  Vencimiento";
             this.Vencimiento.Name = "Vencimiento";
             this.Vencimiento.ReadOnly = true;
-            this.Vencimiento.Width = 114;
+            this.Vencimiento.Visible = false;
+            this.Vencimiento.Width = 124;
             // 
             // nCantidad
             // 
@@ -842,7 +844,7 @@
             this.fPrecioCompra.HeaderText = "Precio Compra";
             this.fPrecioCompra.Name = "fPrecioCompra";
             this.fPrecioCompra.ReadOnly = true;
-            this.fPrecioCompra.Width = 93;
+            this.fPrecioCompra.Width = 101;
             // 
             // fGanancia
             // 
@@ -868,7 +870,7 @@
             this.fPrecioVenta.HeaderText = "Precio Venta";
             this.fPrecioVenta.Name = "fPrecioVenta";
             this.fPrecioVenta.ReadOnly = true;
-            this.fPrecioVenta.Width = 85;
+            this.fPrecioVenta.Width = 92;
             // 
             // fSubTotal
             // 

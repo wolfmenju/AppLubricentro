@@ -136,7 +136,7 @@ namespace AppInguiri
             }
             else
             {
-                DgvUsuario.DataSource = listUsuario;
+                DgvUsuario.DataSource = null;
             }
         }
 

@@ -165,10 +165,10 @@
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             this.sDescripcion.DefaultCellStyle = dataGridViewCellStyle3;
             this.sDescripcion.Frozen = true;
-            this.sDescripcion.HeaderText = "Medicamento";
+            this.sDescripcion.HeaderText = "Producto";
             this.sDescripcion.Name = "sDescripcion";
             this.sDescripcion.ReadOnly = true;
-            this.sDescripcion.Width = 95;
+            this.sDescripcion.Width = 75;
             // 
             // bAlternativo
             // 

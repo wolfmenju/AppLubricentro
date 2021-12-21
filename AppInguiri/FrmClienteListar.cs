@@ -51,7 +51,7 @@ namespace AppInguiri
             }
             else
             {
-                DgvCliente.DataSource = listCliente;
+                DgvCliente.DataSource = null;
             }
 
         }

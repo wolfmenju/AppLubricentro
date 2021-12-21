@@ -144,7 +144,7 @@ namespace AppInguiri
             }
             else
             {
-                DgvParametros.DataSource = listParamet;
+                DgvParametros.DataSource = null;
             }
         }
         private void Eliminar()

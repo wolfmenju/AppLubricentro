@@ -67,7 +67,7 @@ namespace AppInguiri
 
                 listProducto.Clear();
                 Producto objProducto = new Producto();
-                objProducto.bEstado = CboTipoBusqueda.SelectedIndex == 0 ? true : false;
+                objProducto.bEstado = CboTipoBusqueda.SelectedIndex == 1 ? true : false;
                 objProducto.nTipo = 5;
                 objProducto.sPrincipioActivo = txtDescripcion.Text.ToUpper();
 
@@ -81,7 +81,7 @@ namespace AppInguiri
                 }
                 else
                 {
-                    DgvProducto.DataSource = listProducto;
+                    DgvProducto.DataSource = null;
                 }
             }
             else
@@ -374,7 +374,8 @@ namespace AppInguiri
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if ((int)txtCompra.TextLength > 0 && (int)txtVenta.TextLength > 0 && (int)txtLote.TextLength > 0 && Convert.ToInt32(NdCantidad.Text) > 0)
+                //if ((int)txtCompra.TextLength > 0 && (int)txtVenta.TextLength > 0 && (int)txtLote.TextLength > 0 && Convert.ToInt32(NdCantidad.Text) > 0)
+                if ((int)txtCompra.TextLength > 0 && (int)txtVenta.TextLength > 0 && Convert.ToInt32(NdCantidad.Text) > 0)
                 {
                     txtVenta.Focus();
                     lblMonto.Text = Funciones.CalcularMonto(Convert.ToInt32(NdCantidad.Text), Convert.ToDecimal(txtCompra.Text)).ToString("C");
@@ -390,7 +391,8 @@ namespace AppInguiri
         {
             if (e.KeyCode == Keys.Enter)
             {
-                if (txtCompra.Enabled && txtVenta.Enabled && txtLote.Enabled && Convert.ToInt32(NdCantidad.Text) > 0)
+                if (txtCompra.Enabled && txtVenta.Enabled && Convert.ToInt32(NdCantidad.Text) > 0)
+                //if (txtCompra.Enabled && txtVenta.Enabled && txtLote.Enabled && Convert.ToInt32(NdCantidad.Text) > 0)
                 {
                     AgregarProducto();
                 }
@@ -411,22 +413,28 @@ namespace AppInguiri
                 
                 if (xTipo == 2)
                 {
+                    /*
                     if (dtVencimiento.Value.Date >= DateTime.Now.Date)
                     {
                         MessageBox.Show("No es posible realizar la devolución de los productos. Debe ser productos Vencidos.", "InguiriSoft", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
+                    */
                 }
                 else
                 {
+                    /*
                     if (frmVenta != null && dtVencimiento.Value.Date <= DateTime.Now.Date)
                     {
                         MessageBox.Show("No es posible realizar la venta de un Producto Vencido.", "InguiriSoft", MessageBoxButtons.OK, MessageBoxIcon.Information);
                         return;
                     }
+                    */
+
                 }
 
-                if (!txtCompra.Enabled && !txtVenta.Enabled && !txtLote.Enabled && !dtVencimiento.Enabled && Convert.ToInt32(NdCantidad.Text) > 0)
+                if (!txtCompra.Enabled && !txtVenta.Enabled && Convert.ToInt32(NdCantidad.Text) > 0)
+                //if (!txtCompra.Enabled && !txtVenta.Enabled && !txtLote.Enabled && !dtVencimiento.Enabled && Convert.ToInt32(NdCantidad.Text) > 0)
                 {
                     AgregarProducto();
                 }
@@ -511,7 +519,8 @@ namespace AppInguiri
                             }
                             else
                             {
-                                if ((int)txtCompra.TextLength > 0 && (int)txtVenta.TextLength > 0 && (int)txtLote.TextLength > 0 && Convert.ToInt32(NdCantidad.Text) > 0)
+                                if ((int)txtCompra.TextLength > 0 && (int)txtVenta.TextLength > 0 && Convert.ToInt32(NdCantidad.Text) > 0)
+                                //if ((int)txtCompra.TextLength > 0 && (int)txtVenta.TextLength > 0 && (int)txtLote.TextLength > 0 && Convert.ToInt32(NdCantidad.Text) > 0)
                                 {
                                     ProductoHistorial objProducHistorial = new ProductoHistorial()
                                     {
@@ -533,7 +542,8 @@ namespace AppInguiri
                     }
                     else
                     {
-                        if ((int)txtCompra.TextLength > 0 && (int)txtVenta.TextLength > 0 && (int)txtLote.TextLength > 0 && Convert.ToInt32(NdCantidad.Text) > 0)
+                        if ((int)txtCompra.TextLength > 0 && (int)txtVenta.TextLength > 0 && Convert.ToInt32(NdCantidad.Text) > 0)
+                        //if ((int)txtCompra.TextLength > 0 && (int)txtVenta.TextLength > 0 && (int)txtLote.TextLength > 0 && Convert.ToInt32(NdCantidad.Text) > 0)
                         {
                             ProductoHistorial objProducHistorial = new ProductoHistorial()
                             {

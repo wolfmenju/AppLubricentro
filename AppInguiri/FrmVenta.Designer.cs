@@ -372,12 +372,12 @@
             this.rdMedicamento.AutoSize = true;
             this.rdMedicamento.Checked = true;
             this.rdMedicamento.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.rdMedicamento.Location = new System.Drawing.Point(848, 23);
+            this.rdMedicamento.Location = new System.Drawing.Point(872, 23);
             this.rdMedicamento.Name = "rdMedicamento";
-            this.rdMedicamento.Size = new System.Drawing.Size(132, 17);
+            this.rdMedicamento.Size = new System.Drawing.Size(108, 17);
             this.rdMedicamento.TabIndex = 37;
             this.rdMedicamento.TabStop = true;
-            this.rdMedicamento.Text = "Medicamentos [F3]";
+            this.rdMedicamento.Text = "Productos [F3]";
             this.rdMedicamento.UseVisualStyleBackColor = true;
             // 
             // txtDia
@@ -773,7 +773,6 @@
             this.nIdMovimiento.Name = "nIdMovimiento";
             this.nIdMovimiento.ReadOnly = true;
             this.nIdMovimiento.Visible = false;
-            this.nIdMovimiento.Width = 77;
             // 
             // nIdProducto
             // 
@@ -783,7 +782,6 @@
             this.nIdProducto.Name = "nIdProducto";
             this.nIdProducto.ReadOnly = true;
             this.nIdProducto.Visible = false;
-            this.nIdProducto.Width = 66;
             // 
             // sDescripcion
             // 
@@ -804,7 +802,6 @@
             this.sLote.Name = "sLote";
             this.sLote.ReadOnly = true;
             this.sLote.Visible = false;
-            this.sLote.Width = 53;
             // 
             // Vencimiento
             // 
@@ -818,7 +815,6 @@
             this.Vencimiento.Name = "Vencimiento";
             this.Vencimiento.ReadOnly = true;
             this.Vencimiento.Visible = false;
-            this.Vencimiento.Width = 124;
             // 
             // nCantidad
             // 

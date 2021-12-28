@@ -39,7 +39,7 @@ namespace AppInguiri
 
         private void FrmCompra_Load(object sender, EventArgs e)
         {
-            CboTipoBusqueda.SelectedIndex = 0;
+            CboTipoBusqueda.SelectedIndex = 1;
 
             if (xTipo == 1)
             {

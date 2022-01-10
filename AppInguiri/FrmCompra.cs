@@ -70,12 +70,20 @@ namespace AppInguiri
         {
             Documento objDoc = new Documento() {nTipo=5,bEstado=true };
             List<Documento> lis = objDocumentNeg.ListarDocumento(objDoc);
+            List<Documento> lis2 = new List<Documento>();
+
+            foreach (var item in lis)
+            {
+                if (item.sDescripcion == "FACTURA" || item.sDescripcion == "TICKET" 
+                    || item.sDescripcion == "BOLETA" || item.sDescripcion == "NOTA DE VENTA")
+                {
+                    lis2.Add(item);
+                }
+            }
+
             cboDocumento.ValueMember = "sIdDocumento";
             cboDocumento.DisplayMember = "sDescripcion";
-            lis.RemoveAt(2);
-            lis.RemoveAt(2);
-            //lis.RemoveAt(3);
-            cboDocumento.DataSource = lis;
+            cboDocumento.DataSource = lis2;
             //Tipo de Pgo
             cboTipo.SelectedIndex = 0;
 

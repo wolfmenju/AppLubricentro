@@ -54,18 +54,26 @@ namespace AppInguiri
         {
             Documento objDoc = new Documento() { nTipo = 5, bEstado = true };
             List<Documento> lis = objDocumentNeg.ListarDocumento(objDoc);
+
+            List<Documento> lis2 = new List<Documento>();
+
+            foreach (var item in lis)
+            {
+                if (item.sDescripcion == "AJUSTE DE STOCK - INCREMENTO" || item.sDescripcion == "AJUSTE DE STOCK - DISMINUIR")
+                {
+                    lis2.Add(item);
+                }
+            }
+            
             cboDocumento.ValueMember = "sIdDocumento";
             cboDocumento.DisplayMember = "sDescripcion";
-            lis.RemoveAt(0);
-            lis.RemoveAt(0);
-            lis.RemoveAt(2);
-
-            cboDocumento.DataSource = lis;
+            
+            cboDocumento.DataSource = lis2;
             cboDocumento.Enabled = true;
 
-            for (int i = 0; i < lis.Count; i++)
+            for (int i = 0; i < lis2.Count; i++)
             {
-                if (lis[i].sDescripcion == "AJUSTE DE STOCK")
+                if (lis2[i].sDescripcion == "AJUSTE DE STOCK")
                 {
                     cboDocumento.SelectedIndex = i;
                     DocDefault = i;
@@ -227,9 +235,8 @@ namespace AppInguiri
                 break;
             }
             
-            if (cboDocumento.SelectedValue.ToString() == "06")  xTipo = 2;
-            else if (cboDocumento.SelectedValue.ToString() == "07") xTipo = 3;
-            else if (cboDocumento.SelectedValue.ToString() == "08") xTipo = 4;
+            if (cboDocumento.SelectedValue.ToString() == "04")  xTipo = 3;
+            else if (cboDocumento.SelectedValue.ToString() == "05") xTipo = 4;
         }
         
         private void btnBuscar_Click(object sender, EventArgs e)

@@ -55,18 +55,26 @@ namespace AppInguiri
         {
             Documento objDoc = new Documento() { nTipo = 5, bEstado = true };
             List<Documento> lis = objDocumentNeg.ListarDocumento(objDoc);
+
+            List<Documento> lis2 = new List<Documento>();
+
+            foreach (var item in lis)
+            {
+                if (item.sDescripcion == "FACTURA" || item.sDescripcion == "TICKET"
+                    || item.sDescripcion == "BOLETA")
+                {
+                    lis2.Add(item);
+                }
+            }
+
             cboDocumento.ValueMember = "sIdDocumento";
             cboDocumento.DisplayMember = "sDescripcion";
-            lis.RemoveAt(2);
-            lis.RemoveAt(2);
-            //lis.RemoveAt(2);
-            //lis.RemoveAt(2);
-
-            cboDocumento.DataSource = lis;
             
-            for (int i = 0; i < lis.Count; i++)
+            cboDocumento.DataSource = lis2;
+            
+            for (int i = 0; i < lis2.Count; i++)
             {
-                if (lis[i].sDescripcion == "TICKET")
+                if (lis2[i].sDescripcion == "TICKET")
                 {
                     cboDocumento.SelectedIndex = i;
                     DocDefault = i;

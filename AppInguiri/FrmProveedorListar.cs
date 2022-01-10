@@ -51,7 +51,7 @@ namespace AppInguiri
             }
             else
             {
-                DgvProveedor.DataSource = listProveedor;
+                DgvProveedor.DataSource = null;
             }
 
         }

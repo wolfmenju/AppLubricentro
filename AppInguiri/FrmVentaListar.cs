@@ -220,13 +220,20 @@ namespace AppInguiri
 
         private void btnImprimir_Click(object sender, EventArgs e)
         {
+            if (dgvVenta.RowCount < 1)
+            {
+                MessageBox.Show("No existe Registro.", "InguiriSoft", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                cerrarFormulario = false;
+                return;
+            }
+
             if (dgvVenta.CurrentCell != null || dgvVenta.CurrentCell.RowIndex != 0)
             {
                 if (MessageBox.Show("¿Desea Reimprimir El Recibo de La Venta Seleccionada?", "InguiriSoft", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
                 {
                     Int32 filaselecionada = dgvVenta.CurrentCell.RowIndex;
                     Venta _venta = (Venta)dgvVenta.Rows[filaselecionada].DataBoundItem;
-                    
+
                     ImprimirComprobante(_venta.nIdVenta);
                 }
             }  

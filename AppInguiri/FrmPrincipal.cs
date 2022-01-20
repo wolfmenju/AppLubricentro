@@ -1,20 +1,20 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Text;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
 using DevExpress.XtraBars;
 using Entidad;
 using Negocio;
+using System.Runtime.InteropServices;
+using System.Configuration;
+using System.Windows.Forms;
 
 namespace AppInguiri
 {
+   
     public partial class FrmPrincipal : DevExpress.XtraBars.Ribbon.RibbonForm
     {
+        [System.Runtime.InteropServices.DllImport("user32")]
+        private static extern bool GetLastInputInfo(ref LASTINPUTINFO plii);
+
         #region Variables de Formularios
         FrmPermiso frmPermiso = null;
         FrmPresentacion frmPresentacion = null;
@@ -48,13 +48,16 @@ namespace AppInguiri
         FrmRptDeudaPorVencer frmRptDeudaPorVencer = null;
         FrmRptReporteGenerales frmRptReporteGenerales = null;
         FrmRptProductos frmRptProductos = null;
-
+        
         #endregion
 
         List<Permiso> listPerm = new List<Permiso>();
         PermisoNegocio objPermNeg = new PermisoNegocio();
         public FrmLogin frmLogin = null;
-        
+        public bool bloqueado = false;
+        private LASTINPUTINFO INPUT = new LASTINPUTINFO();
+        int _VidaUtil = 0;
+
         public FrmPrincipal()
         {
             InitializeComponent();
@@ -62,6 +65,8 @@ namespace AppInguiri
 
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
+            _VidaUtil = Convert.ToInt32(ConfigurationManager.AppSettings["VidaUtil"]);
+            INPUT.cbSize = Marshal.SizeOf(INPUT);
 
             if (VerCaja())
             {
@@ -376,5 +381,42 @@ namespace AppInguiri
             frmRptProductos = FrmRptProductos.Instance();
             frmRptProductos.ShowDialog();
         }
+        
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            GetLastInputInfo(ref INPUT); //'COMPROBAMOS LA FUNCION CADA SEGUNDO
+
+            int total = Environment.TickCount;
+            int ultimo = INPUT.dwTime;
+            int intervalo = (total - ultimo) / 1000;
+            
+            if (intervalo > _VidaUtil && bloqueado == false)
+            {
+                FrmBloqueo frmBloqueo = new FrmBloqueo();
+                bloqueado = true;
+                intervalo = 0;
+                timer1.Stop();
+                frmBloqueo.sLogin = this.CodUsuario.Caption;
+                frmBloqueo.frmPrincipal = this;
+                frmBloqueo.ShowDialog();
+
+                if (frmBloqueo.DialogResult == DialogResult.OK)
+                {
+                    timer1.Start();
+                    bloqueado = frmBloqueo.bloqueado;
+                }
+                else
+                {
+                    this.Close();
+                    this.Dispose();
+                }
+            }
+        }
     }
+}
+
+struct LASTINPUTINFO
+{
+     public int cbSize;
+     public int dwTime;
 }

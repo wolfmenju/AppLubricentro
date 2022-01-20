@@ -28,12 +28,18 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProveedor));
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmProveedor));
             this.PanOpciones = new System.Windows.Forms.Panel();
+            this.BtnEliminar = new System.Windows.Forms.Button();
+            this.BtnSalir = new System.Windows.Forms.Button();
+            this.BtnRefrescar = new System.Windows.Forms.Button();
+            this.BtnBuscar = new System.Windows.Forms.Button();
+            this.BtnAgregar = new System.Windows.Forms.Button();
+            this.BtnModificar = new System.Windows.Forms.Button();
             this.PanInferior = new System.Windows.Forms.Panel();
             this.ChkTodos = new System.Windows.Forms.CheckBox();
             this.LblTotal = new System.Windows.Forms.Label();
@@ -45,12 +51,6 @@
             this.sDireccion = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sCelular = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sContacto = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.BtnSalir = new System.Windows.Forms.Button();
-            this.BtnEliminar = new System.Windows.Forms.Button();
-            this.BtnRefrescar = new System.Windows.Forms.Button();
-            this.BtnBuscar = new System.Windows.Forms.Button();
-            this.BtnAgregar = new System.Windows.Forms.Button();
-            this.BtnModificar = new System.Windows.Forms.Button();
             this.PanOpciones.SuspendLayout();
             this.PanInferior.SuspendLayout();
             this.PanTodo.SuspendLayout();
@@ -73,157 +73,22 @@
             this.PanOpciones.Size = new System.Drawing.Size(109, 482);
             this.PanOpciones.TabIndex = 12;
             // 
-            // PanInferior
+            // BtnEliminar
             // 
-            this.PanInferior.BackColor = System.Drawing.Color.White;
-            this.PanInferior.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.PanInferior.Controls.Add(this.ChkTodos);
-            this.PanInferior.Controls.Add(this.LblTotal);
-            this.PanInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.PanInferior.Location = new System.Drawing.Point(0, 462);
-            this.PanInferior.Name = "PanInferior";
-            this.PanInferior.Size = new System.Drawing.Size(893, 20);
-            this.PanInferior.TabIndex = 15;
-            // 
-            // ChkTodos
-            // 
-            this.ChkTodos.AutoSize = true;
-            this.ChkTodos.Checked = true;
-            this.ChkTodos.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.ChkTodos.Dock = System.Windows.Forms.DockStyle.Right;
-            this.ChkTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ChkTodos.ForeColor = System.Drawing.Color.Blue;
-            this.ChkTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkTodos.Location = new System.Drawing.Point(821, 0);
-            this.ChkTodos.Name = "ChkTodos";
-            this.ChkTodos.Size = new System.Drawing.Size(68, 16);
-            this.ChkTodos.TabIndex = 19;
-            this.ChkTodos.Text = "Activos";
-            this.ChkTodos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.ChkTodos.UseVisualStyleBackColor = true;
-            this.ChkTodos.CheckedChanged += new System.EventHandler(this.ChkTodos_CheckedChanged);
-            // 
-            // LblTotal
-            // 
-            this.LblTotal.AutoSize = true;
-            this.LblTotal.Dock = System.Windows.Forms.DockStyle.Left;
-            this.LblTotal.FlatStyle = System.Windows.Forms.FlatStyle.System;
-            this.LblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.LblTotal.ForeColor = System.Drawing.Color.Blue;
-            this.LblTotal.Location = new System.Drawing.Point(0, 0);
-            this.LblTotal.Name = "LblTotal";
-            this.LblTotal.Size = new System.Drawing.Size(174, 13);
-            this.LblTotal.TabIndex = 17;
-            this.LblTotal.Text = " Se Encontraron 00 Registros";
-            // 
-            // PanTodo
-            // 
-            this.PanTodo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.PanTodo.Controls.Add(this.DgvProveedor);
-            this.PanTodo.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.PanTodo.Location = new System.Drawing.Point(0, 0);
-            this.PanTodo.Name = "PanTodo";
-            this.PanTodo.Size = new System.Drawing.Size(893, 462);
-            this.PanTodo.TabIndex = 16;
-            // 
-            // DgvProveedor
-            // 
-            this.DgvProveedor.AllowUserToAddRows = false;
-            this.DgvProveedor.AllowUserToDeleteRows = false;
-            this.DgvProveedor.AllowUserToResizeColumns = false;
-            this.DgvProveedor.AllowUserToResizeRows = false;
-            dataGridViewCellStyle1.BackColor = System.Drawing.Color.PaleGreen;
-            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
-            this.DgvProveedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
-            this.DgvProveedor.BackgroundColor = System.Drawing.SystemColors.ControlLight;
-            this.DgvProveedor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCyan;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvProveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
-            this.DgvProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.DgvProveedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nIdProveedor,
-            this.sRazonSocial,
-            this.sRuc,
-            this.sDireccion,
-            this.sCelular,
-            this.sContacto});
-            this.DgvProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.DgvProveedor.Location = new System.Drawing.Point(0, 0);
-            this.DgvProveedor.MultiSelect = false;
-            this.DgvProveedor.Name = "DgvProveedor";
-            this.DgvProveedor.ReadOnly = true;
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Aquamarine;
-            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F);
-            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DgvProveedor.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
-            this.DgvProveedor.RowHeadersVisible = false;
-            this.DgvProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.DgvProveedor.Size = new System.Drawing.Size(891, 460);
-            this.DgvProveedor.TabIndex = 11;
-            // 
-            // nIdProveedor
-            // 
-            this.nIdProveedor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.nIdProveedor.DataPropertyName = "nIdProveedor";
-            this.nIdProveedor.HeaderText = "IdProveedor";
-            this.nIdProveedor.Name = "nIdProveedor";
-            this.nIdProveedor.ReadOnly = true;
-            this.nIdProveedor.Visible = false;
-            this.nIdProveedor.Width = 84;
-            // 
-            // sRazonSocial
-            // 
-            this.sRazonSocial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.sRazonSocial.DataPropertyName = "sRazonSocial";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            this.sRazonSocial.DefaultCellStyle = dataGridViewCellStyle3;
-            this.sRazonSocial.HeaderText = "Razón Social";
-            this.sRazonSocial.Name = "sRazonSocial";
-            this.sRazonSocial.ReadOnly = true;
-            this.sRazonSocial.Width = 95;
-            // 
-            // sRuc
-            // 
-            this.sRuc.DataPropertyName = "sRuc";
-            this.sRuc.HeaderText = "Ruc/Dni";
-            this.sRuc.Name = "sRuc";
-            this.sRuc.ReadOnly = true;
-            // 
-            // sDireccion
-            // 
-            this.sDireccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.sDireccion.DataPropertyName = "sDireccion";
-            this.sDireccion.HeaderText = "Dirección";
-            this.sDireccion.Name = "sDireccion";
-            this.sDireccion.ReadOnly = true;
-            this.sDireccion.Width = 84;
-            // 
-            // sCelular
-            // 
-            this.sCelular.DataPropertyName = "sCelular";
-            this.sCelular.HeaderText = "Celular";
-            this.sCelular.Name = "sCelular";
-            this.sCelular.ReadOnly = true;
-            // 
-            // sContacto
-            // 
-            this.sContacto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
-            this.sContacto.DataPropertyName = "sContacto";
-            this.sContacto.HeaderText = "Contacto";
-            this.sContacto.Name = "sContacto";
-            this.sContacto.ReadOnly = true;
-            this.sContacto.Width = 83;
+            this.BtnEliminar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
+            this.BtnEliminar.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BtnEliminar.ForeColor = System.Drawing.Color.Black;
+            this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
+            this.BtnEliminar.Location = new System.Drawing.Point(3, 243);
+            this.BtnEliminar.Name = "BtnEliminar";
+            this.BtnEliminar.Size = new System.Drawing.Size(102, 52);
+            this.BtnEliminar.TabIndex = 4;
+            this.BtnEliminar.TabStop = false;
+            this.BtnEliminar.Text = "&Eliminar  [F5]";
+            this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
+            this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
+            this.BtnEliminar.UseVisualStyleBackColor = true;
+            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnSalir
             // 
@@ -244,23 +109,6 @@
             this.BtnSalir.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BtnSalir.UseVisualStyleBackColor = true;
             this.BtnSalir.Click += new System.EventHandler(this.BtnSalir_Click);
-            // 
-            // BtnEliminar
-            // 
-            this.BtnEliminar.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-            this.BtnEliminar.Font = new System.Drawing.Font("Segoe UI Symbol", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnEliminar.ForeColor = System.Drawing.Color.Black;
-            this.BtnEliminar.Image = ((System.Drawing.Image)(resources.GetObject("BtnEliminar.Image")));
-            this.BtnEliminar.Location = new System.Drawing.Point(3, 243);
-            this.BtnEliminar.Name = "BtnEliminar";
-            this.BtnEliminar.Size = new System.Drawing.Size(102, 52);
-            this.BtnEliminar.TabIndex = 4;
-            this.BtnEliminar.TabStop = false;
-            this.BtnEliminar.Text = "&Eliminar  [F5]";
-            this.BtnEliminar.TextAlign = System.Drawing.ContentAlignment.BottomCenter;
-            this.BtnEliminar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
-            this.BtnEliminar.UseVisualStyleBackColor = true;
-            this.BtnEliminar.Click += new System.EventHandler(this.BtnEliminar_Click);
             // 
             // BtnRefrescar
             // 
@@ -329,6 +177,157 @@
             this.BtnModificar.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageAboveText;
             this.BtnModificar.UseVisualStyleBackColor = true;
             this.BtnModificar.Click += new System.EventHandler(this.BtnModificar_Click);
+            // 
+            // PanInferior
+            // 
+            this.PanInferior.BackColor = System.Drawing.Color.White;
+            this.PanInferior.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.PanInferior.Controls.Add(this.ChkTodos);
+            this.PanInferior.Controls.Add(this.LblTotal);
+            this.PanInferior.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.PanInferior.Location = new System.Drawing.Point(0, 462);
+            this.PanInferior.Name = "PanInferior";
+            this.PanInferior.Size = new System.Drawing.Size(893, 20);
+            this.PanInferior.TabIndex = 15;
+            // 
+            // ChkTodos
+            // 
+            this.ChkTodos.AutoSize = true;
+            this.ChkTodos.Checked = true;
+            this.ChkTodos.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.ChkTodos.Dock = System.Windows.Forms.DockStyle.Right;
+            this.ChkTodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ChkTodos.ForeColor = System.Drawing.Color.Blue;
+            this.ChkTodos.ImageAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ChkTodos.Location = new System.Drawing.Point(821, 0);
+            this.ChkTodos.Name = "ChkTodos";
+            this.ChkTodos.Size = new System.Drawing.Size(68, 16);
+            this.ChkTodos.TabIndex = 19;
+            this.ChkTodos.Text = "Activos";
+            this.ChkTodos.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ChkTodos.UseVisualStyleBackColor = true;
+            this.ChkTodos.CheckedChanged += new System.EventHandler(this.ChkTodos_CheckedChanged);
+            // 
+            // LblTotal
+            // 
+            this.LblTotal.AutoSize = true;
+            this.LblTotal.Dock = System.Windows.Forms.DockStyle.Left;
+            this.LblTotal.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.LblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.LblTotal.ForeColor = System.Drawing.Color.Blue;
+            this.LblTotal.Location = new System.Drawing.Point(0, 0);
+            this.LblTotal.Name = "LblTotal";
+            this.LblTotal.Size = new System.Drawing.Size(174, 13);
+            this.LblTotal.TabIndex = 17;
+            this.LblTotal.Text = " Se Encontraron 00 Registros";
+            // 
+            // PanTodo
+            // 
+            this.PanTodo.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.PanTodo.Controls.Add(this.DgvProveedor);
+            this.PanTodo.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.PanTodo.Location = new System.Drawing.Point(0, 0);
+            this.PanTodo.Name = "PanTodo";
+            this.PanTodo.Size = new System.Drawing.Size(893, 462);
+            this.PanTodo.TabIndex = 16;
+            // 
+            // DgvProveedor
+            // 
+            this.DgvProveedor.AllowUserToAddRows = false;
+            this.DgvProveedor.AllowUserToDeleteRows = false;
+            this.DgvProveedor.AllowUserToResizeColumns = false;
+            this.DgvProveedor.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.PaleGreen;
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Black;
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.Black;
+            this.DgvProveedor.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.DgvProveedor.BackgroundColor = System.Drawing.SystemColors.ControlLight;
+            this.DgvProveedor.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.Single;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.LightCyan;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvProveedor.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
+            this.DgvProveedor.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgvProveedor.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nIdProveedor,
+            this.sRazonSocial,
+            this.sRuc,
+            this.sDireccion,
+            this.sCelular,
+            this.sContacto});
+            this.DgvProveedor.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.DgvProveedor.Location = new System.Drawing.Point(0, 0);
+            this.DgvProveedor.MultiSelect = false;
+            this.DgvProveedor.Name = "DgvProveedor";
+            this.DgvProveedor.ReadOnly = true;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.Color.Aquamarine;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Tahoma", 8.25F);
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.DgvProveedor.RowHeadersDefaultCellStyle = dataGridViewCellStyle4;
+            this.DgvProveedor.RowHeadersVisible = false;
+            this.DgvProveedor.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.DgvProveedor.Size = new System.Drawing.Size(891, 460);
+            this.DgvProveedor.TabIndex = 11;
+            // 
+            // nIdProveedor
+            // 
+            this.nIdProveedor.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.nIdProveedor.DataPropertyName = "nIdProveedor";
+            this.nIdProveedor.HeaderText = "IdProveedor";
+            this.nIdProveedor.Name = "nIdProveedor";
+            this.nIdProveedor.ReadOnly = true;
+            this.nIdProveedor.Visible = false;
+            // 
+            // sRazonSocial
+            // 
+            this.sRazonSocial.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.sRazonSocial.DataPropertyName = "sRazonSocial";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            this.sRazonSocial.DefaultCellStyle = dataGridViewCellStyle3;
+            this.sRazonSocial.HeaderText = "Razón Social";
+            this.sRazonSocial.Name = "sRazonSocial";
+            this.sRazonSocial.ReadOnly = true;
+            this.sRazonSocial.Width = 92;
+            // 
+            // sRuc
+            // 
+            this.sRuc.DataPropertyName = "sRuc";
+            this.sRuc.HeaderText = "Ruc/Dni";
+            this.sRuc.Name = "sRuc";
+            this.sRuc.ReadOnly = true;
+            // 
+            // sDireccion
+            // 
+            this.sDireccion.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.sDireccion.DataPropertyName = "sDireccion";
+            this.sDireccion.HeaderText = "Dirección";
+            this.sDireccion.Name = "sDireccion";
+            this.sDireccion.ReadOnly = true;
+            this.sDireccion.Width = 75;
+            // 
+            // sCelular
+            // 
+            this.sCelular.DataPropertyName = "sCelular";
+            this.sCelular.HeaderText = "Celular";
+            this.sCelular.Name = "sCelular";
+            this.sCelular.ReadOnly = true;
+            // 
+            // sContacto
+            // 
+            this.sContacto.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.AllCells;
+            this.sContacto.DataPropertyName = "sContacto";
+            this.sContacto.HeaderText = "Contacto";
+            this.sContacto.Name = "sContacto";
+            this.sContacto.ReadOnly = true;
+            this.sContacto.Width = 76;
             // 
             // FrmProveedor
             // 

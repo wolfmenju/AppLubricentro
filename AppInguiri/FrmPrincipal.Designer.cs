@@ -102,6 +102,7 @@
             this.defaultLookAndFeel1 = new DevExpress.LookAndFeel.DefaultLookAndFeel(this.components);
             this.barButtonItem2 = new DevExpress.XtraBars.BarButtonItem();
             this.barButtonItem30 = new DevExpress.XtraBars.BarButtonItem();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.RibbonControl)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.xtraTabbedMdiManager1)).BeginInit();
             this.SuspendLayout();
@@ -777,6 +778,12 @@
             this.barButtonItem30.LargeGlyph = global::AppInguiri.Properties.Resources.xFormato;
             this.barButtonItem30.Name = "barButtonItem30";
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -872,5 +879,6 @@
         private DevExpress.XtraBars.BarButtonItem barBtnReporteCompra;
         private DevExpress.XtraBars.BarButtonItem barBtnDevuelveProducto;
         private DevExpress.XtraBars.BarButtonItem barBtnActualizaStock;
+        private System.Windows.Forms.Timer timer1;
     }
 }

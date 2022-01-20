@@ -69,6 +69,7 @@
       <HintPath>Libreria\NPOI.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
     <Reference Include="System.Web" />
     <Reference Include="System.Web.Services" />
@@ -103,6 +104,12 @@
     </Compile>
     <Compile Include="FrmActualizaDato.Designer.cs">
       <DependentUpon>FrmActualizaDato.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmBloqueo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmBloqueo.Designer.cs">
+      <DependentUpon>FrmBloqueo.cs</DependentUpon>
     </Compile>
     <Compile Include="FrmProductoListado.cs">
       <SubType>Form</SubType>
@@ -576,6 +583,9 @@
     </Compile>
     <EmbeddedResource Include="FrmActualizaDato.resx">
       <DependentUpon>FrmActualizaDato.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmBloqueo.resx">
+      <DependentUpon>FrmBloqueo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FrmProductoListado.resx">
       <DependentUpon>FrmProductoListado.cs</DependentUpon>

@@ -110,6 +110,10 @@ namespace AppInguiri
                     Venta _vent = (Venta)dgvVenta.CurrentRow.DataBoundItem;
                     CargarDetalles(_vent.nIdVenta);
                 }
+                else
+                {
+                    cerrarFormulario = false;
+                }
             }
         }
 
